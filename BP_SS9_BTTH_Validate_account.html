@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function validateAccount(account) {
+        let pattern = /^[_a-z0-9]{6,}$/;
+        return pattern.test(account);
+    }
+    console.log(validateAccount("123abc_"));
+    console.log(validateAccount("_abc123"));
+    console.log(validateAccount("______"));
+    console.log(validateAccount("123456"));
+    console.log(validateAccount("abcdefg"));
+
+    console.log(validateAccount(".@"));
+    console.log(validateAccount("12345"));
+    console.log(validateAccount("1234_"));
+    console.log(validateAccount("abcde"));
+
+</script>
+</body>
+</html>
